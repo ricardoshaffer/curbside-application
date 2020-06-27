@@ -14,7 +14,8 @@
     "start:dev": "concurrently \"nodemon --ignore '../client/*'\" \"npm run client\"",
     "seed": "node scripts/itemsSeed.js",
     "install": "cd ../client && npm install",
-    "build": "webpack"
+    "build": "ng build",
+  "heroku-postbuild": "ng build --prod"
   },
   "keywords": [],
   "author": "",
