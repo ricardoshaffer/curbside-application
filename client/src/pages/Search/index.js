@@ -4,7 +4,7 @@ import Nav from '../../components/Nav';
 import "../../App.css";
 import Results from '../../utilities/search/results-function';
 
-function Homepage() {
+function Search() {
     return(
     <div className="App">
     <head>
@@ -16,4 +16,4 @@ function Homepage() {
     </div>
     )
 }
-export default Homepage;
+export default Search;
