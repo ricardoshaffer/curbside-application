@@ -2,20 +2,20 @@
   "name": "curbside-application",
   "version": "1.0.0",
   "description": "",
-  "main": "Backend/server.js",
+  "main": "./Backend/server.js",
   "engines": {
     "node": "12.16.x",
     "npm": "6.x"
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node Backend/server.js",
+    "start:prod": "node ./Backend/server.js",
     "client": "cd ./client && npm run start",
     "start:dev": "concurrently \"nodemon --ignore './client/*'\" \"npm run client\"",
     "seed": "node scripts/itemsSeed.js",
     "install": "cd ./client && npm install",
-    "build": "build",
-  "heroku-postbuild": "build --prod"
+    "build": "cd ./client && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "keywords": [],
   "author": "",
